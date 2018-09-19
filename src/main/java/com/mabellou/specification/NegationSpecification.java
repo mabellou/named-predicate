@@ -1,7 +1,5 @@
 package com.mabellou.specification;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -62,7 +60,7 @@ public class NegationSpecification<T> implements Specification<T> {
 			case MULTIPLE_LINE:
 				return this.toString(t) + System.lineSeparator() + specificationToNegate.toString(t, StringFormatter.MULTIPLE_LINE);
 			default:
-				throw new NotImplementedException();
+				throw new UnsupportedOperationException();
 		}
 	}
 

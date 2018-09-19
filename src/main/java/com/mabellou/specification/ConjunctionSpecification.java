@@ -1,7 +1,5 @@
 package com.mabellou.specification;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
 
 public class ConjunctionSpecification<T> extends CompositeSpecification<T>  {
@@ -51,7 +49,7 @@ public class ConjunctionSpecification<T> extends CompositeSpecification<T>  {
 			case MULTIPLE_LINE:
 				return toStringMultipleLine(t);
 			default:
-				throw new NotImplementedException();
+				throw new UnsupportedOperationException();
 		}
 	}
 

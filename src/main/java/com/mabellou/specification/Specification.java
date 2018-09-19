@@ -1,7 +1,5 @@
 package com.mabellou.specification;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.Arrays;
 import java.util.Set;
 
@@ -24,10 +22,10 @@ public interface Specification<T> {
 	Set<Specification<T>>  getSatisfiedSpecificationsFor(T t);
 
 	default boolean isSpecialCaseOf(Specification<T> specification) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 	default boolean isGeneralizationOf(Specification<T> specification) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	String getName();

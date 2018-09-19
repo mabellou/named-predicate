@@ -2,7 +2,6 @@ package com.mabellou.specification;
 
 import com.mabellou.specification.data.Container;
 import org.junit.Test;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import static com.mabellou.specification.data.SampleDataTestCase.*;
 import static junit.framework.TestCase.assertFalse;
@@ -10,13 +9,13 @@ import static junit.framework.TestCase.assertTrue;
 
 public class SubsumptionSpecificationTest {
 
-	@Test(expected = NotImplementedException.class)
+	@Test(expected = UnsupportedOperationException.class)
 	public void isSpecialCaseOf_Negate(){
 		Specification<Container> specification = NegationSpecification.of(IS_TRUE_1);
 		specification.isSpecialCaseOf(IS_FALSE_1);
 	}
 
-	@Test(expected = NotImplementedException.class)
+	@Test(expected = UnsupportedOperationException.class)
 	public void isGeneralizationOf_Negate(){
 		Specification<Container> specification = NegationSpecification.of(IS_TRUE_1);
 		specification.isGeneralizationOf(IS_FALSE_1);

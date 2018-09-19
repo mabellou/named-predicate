@@ -1,7 +1,5 @@
 package com.mabellou.specification;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -52,7 +50,7 @@ public abstract class LeafSpecification<T> implements Specification<T> {
 		switch (formatter){
 			case INLINE: return this.toString(t);
 			case MULTIPLE_LINE: return this.toString(t) + System.lineSeparator();
-			default: throw new NotImplementedException();
+			default: throw new UnsupportedOperationException();
 		}
 	}
 }
