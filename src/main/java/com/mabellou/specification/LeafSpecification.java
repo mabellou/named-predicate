@@ -17,7 +17,7 @@ public abstract class LeafSpecification<T> implements Specification<T> {
 	@Override
 	public Set<Specification<T>> getUnsatisfiedSpecificationsFor(final T t) {
 		Set<Specification<T>> unsatisfied = new HashSet<>();
-		if (!this.test(t)) {
+		if (!this.isSatisfiedBy(t)) {
 			unsatisfied.add(this);
 		}
 		return unsatisfied;
@@ -26,7 +26,7 @@ public abstract class LeafSpecification<T> implements Specification<T> {
 	@Override
 	public Set<Specification<T>> getSatisfiedSpecificationsFor(final T t) {
 		Set<Specification<T>> satisfied = new HashSet<>();
-		if (this.test(t)) {
+		if (this.isSatisfiedBy(t)) {
 			satisfied.add(this);
 		}
 		return satisfied;
